@@ -1,0 +1,726 @@
+body {
+    display: flex;
+    height: 641px;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transition: background-color 1s;
+    -webkit-transition: background-color 1s;
+    -moz-transition: background-color 1s;
+    -ms-transition: background-color 1s;
+    -o-transition: background-color 1s;
+    overflow: hidden;
+}
+
+#game {
+    width: 800px;
+    height: 450px;
+    border: 2px solid;
+    position: relative;
+}
+
+#ball {
+    background: black;
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    position: absolute;
+    left: 390px;
+    top: 215px;
+    transition: opacity .3s;
+    -webkit-transition: background-color 1s;
+    -moz-transition: background-color 1s;
+    -ms-transition: background-color 1s;
+    -o-transition: background-color 1s;
+    transition: background-color 1s;
+}
+
+#player {
+    position: absolute;
+    width: 10px;
+    height: 100px;
+    background: black;
+    left: 10px;
+    top: 175px;
+    transition: background-color 1s;
+    -webkit-transition: background-color 1s;
+    -moz-transition: background-color 1s;
+    -ms-transition: background-color 1s;
+    -o-transition: background-color 1s;
+}
+
+#boot {
+    position: absolute;
+    width: 10px;
+    height: 100px;
+    background: black;
+    right: 10px;
+    top: 175px;
+    transition: background-color 1s;
+    -webkit-transition: background-color 1s;
+    -moz-transition: background-color 1s;
+    -ms-transition: background-color 1s;
+    -o-transition: background-color 1s;
+}
+
+#st {
+    position: absolute;
+    background-color: black;
+    color: white;
+    width: 205px;
+    border-radius: 10px;
+    height: 35px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 0px 4px 7px 0px black;
+    left: 297.5px;
+    top: 330px;
+    cursor: pointer;
+    /* z-index: 1; */
+}
+
+#center {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 2px solid;
+    left: 250px;
+    top: 75px;
+    border-radius: 150px;
+    transition: border 1s;
+    -webkit-transition: border 1s;
+    -moz-transition: border 1s;
+    -ms-transition: border 1s;
+    -o-transition: border 1s;
+}
+
+#line {
+    height: 450px;
+    position: absolute;
+    width: 2px;
+    background-color: black;
+    left: 399px;
+    transition: border 1s;
+    -webkit-transition: border 1s;
+    -moz-transition: border 1s;
+    -ms-transition: border 1s;
+    -o-transition: border 1s;
+}
+
+#left {
+    position: absolute;
+    height: 200px;
+    width: 100px;
+    border: 2px solid;
+    top: 125px;
+    left: -2px;
+    transition: border 1s;
+    -webkit-transition: border 1s;
+    -moz-transition: border 1s;
+    -ms-transition: border 1s;
+    -o-transition: border 1s;
+}
+
+#right {
+    position: absolute;
+    height: 200px;
+    width: 100px;
+    border: 2px solid;
+    top: 125px;
+    right: -2px;
+    transition: border 1s;
+    -webkit-transition: border 1s;
+    -moz-transition: border 1s;
+    -ms-transition: border 1s;
+    -o-transition: border 1s;
+}
+
+#corner1 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 2px solid;
+    left: -2px;
+    top: -2px;
+    border-bottom-right-radius: 45px;
+    transition: border 1s;
+    -webkit-transition: border 1s;
+    -moz-transition: border 1s;
+    -ms-transition: border 1s;
+    -o-transition: border 1s;
+}
+
+#corner2 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 2px solid;
+    left: -2px;
+    bottom: -2px;
+    border-top-right-radius: 45px;
+    transition: border 1s;
+    -webkit-transition: border 1s;
+    -moz-transition: border 1s;
+    -ms-transition: border 1s;
+    -o-transition: border 1s;
+}
+
+#corner3 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 2px solid;
+    right: -2px;
+    top: -2px;
+    border-bottom-left-radius: 45px;
+    transition: border 1s;
+    -webkit-transition: border 1s;
+    -moz-transition: border 1s;
+    -ms-transition: border 1s;
+    -o-transition: border 1s;
+}
+
+#corner4 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 2px solid;
+    right: -2px;
+    bottom: -2px;
+    border-top-left-radius: 45px;
+    transition: border 1s;
+    -webkit-transition: border 1s;
+    -moz-transition: border 1s;
+    -ms-transition: border 1s;
+    -o-transition: border 1s;
+}
+
+#result {
+    font-size: 50px;
+    margin-bottom: 40px;
+    margin-top: -96px;
+    margin-left: 71px;
+    opacity: 1;
+    transition: color 1s;
+    -webkit-transition: color 1s;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s;
+    -o-transition: color 1s;
+}
+
+.hide {
+    opacity: 0;
+    display: block;
+}
+
+#na {
+    padding: 10px;
+    width: 300px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#ingroup {
+    position: relative;
+    width: 300px;
+    display: inline-block;
+    left: 250px;
+    top: 62px;
+    text-align: center;
+    /* z-index: 1; */
+}
+
+label {
+    position: absolute;
+    top: 9px;
+    left: 15px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    pointer-events: none;
+}
+
+#na:focus+label,
+#na:valid+label {
+    top: -7px;
+    font-size: 13px;
+    background-color: white;
+}
+
+#container {
+    position: relative;
+    width: 300px;
+    background-color: black;
+    height: 40px;
+    left: 250px;
+    top: 200px;
+    border-radius: 20px;
+    z-index: 1;
+    font-size: 19px;
+}
+
+#e {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    background-color: white;
+    left: 10px;
+    border-radius: 30px;
+    top: 3px;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+    cursor: pointer;
+}
+
+#c {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    background-color: white;
+    top: 3px;
+    right: 10px;
+    border-radius: 30px;
+    opacity: 0;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    cursor: pointer;
+}
+
+#m {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    background-color: white;
+    left: 91.6px;
+    border-radius: 30px;
+    top: 3px;
+    opacity: 0;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+    cursor: pointer;
+}
+
+#h {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    background-color: white;
+    right: 91.6px;
+    border-radius: 30px;
+    top: 3px;
+    opacity: 0;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+    cursor: pointer;
+}
+
+#ring4 {
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    background-color: black;
+    border: 1px solid white;
+    top: 3px;
+    right: 10px;
+    border-radius: 30px;
+}
+
+#ring1 {
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    background-color: black;
+    border: 1px solid white;
+    top: 3px;
+    left: 10px;
+    border-radius: 30px;
+}
+
+#ring2 {
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    background-color: black;
+    border: 1px solid white;
+    top: 3px;
+    left: 91.6px;
+    border-radius: 30px;
+}
+
+#ring3 {
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    background-color: black;
+    border: 1px solid white;
+    top: 3px;
+    right: 91.6px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+#es {
+    top: 10px;
+    left: -43px;
+    position: absolute;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+#mm {
+    top: 48px;
+    position: absolute;
+    left: 80px;
+    transition: .5s;
+}
+
+#hr {
+    position: absolute;
+    top: 48px;
+    left: 173px;
+    transition: .5s;
+}
+
+#q {
+    position: absolute;
+    left: 308px;
+    top: 10px;
+    transition: .5s;
+}
+
+.hidee {
+    opacity: 1;
+    z-index: 1;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+}
+
+#timer {
+    font-size: 150px;
+    position: absolute;
+    left: 362.5px;
+    top: 123px;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+#finish {
+    position: absolute;
+    bottom: 10px;
+    right: 19px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+span #myname {
+    font-family: 'Romantic', sans-serif;
+    font-weight: 600;
+}
+
+small {
+    font-size: 15px;
+}
+
+#tutorial {
+    position: absolute;
+    left: 15px;
+    width: 216px;
+    height: 525px;
+    border: 2px solid;
+    padding: 0px 15px;
+    display: block;
+    transition: .7s;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    -webkit-transition: .7s;
+    -moz-transition: .7s;
+    -ms-transition: .7s;
+    -o-transition: .7s;
+}
+
+#cen {
+    text-align: center;
+}
+
+#tutorial p {
+    font-size: 17px;
+}
+
+#footer {
+    text-align: center;
+    margin-top: -5px;
+}
+
+img {
+    display: none;
+}
+
+#rop {
+    display: none;
+    font-size: 25px;
+    position: relative;
+    color: white;
+    -webkit-text-stroke: 0.3vw black;
+    text-transform: uppercase;
+}
+
+#rop::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: black;
+    -webkit-text-stroke: 0vw black;
+    border-right: 2px solid black;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+    -webkit-animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+    70%,
+    90% {
+        width: 100%;
+    }
+}
+
+@media (min-width:320px) and (orientation:portrait) {
+    #rop {
+        display: block;
+    }
+    #game {
+        display: none;
+    }
+    #tutorial {
+        display: none;
+    }
+    #result {
+        display: none;
+    }
+    body {
+        overflow: hidden;
+    }
+    img {
+        margin-top: px;
+        display: block;
+        width: 200px;
+        height: 200px;
+        animation: rotate 2s ease-in-out infinite;
+        -webkit-animation: rotate 2s ease-in-out infinite;
+    }
+    @keyframes rotate {
+        from {
+            transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+        }
+        to {
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+        }
+    }
+}
+
+@media(min-width:320px)and (max-width:999px) and (orientation:landscape) {
+    #game {
+        display: block;
+        width: 600px;
+        height: 250px;
+        margin-top: -40px;
+    }
+    #tutorial {
+        display: none;
+    }
+    #result {
+        margin-top: -370px;
+        font-size: 20px;
+        margin-left: 8px;
+    }
+    body {
+        overflow: hidden;
+    }
+    small {
+        font-size: 10px;
+    }
+    #na {
+        width: 225px;
+    }
+    #ingroup {
+        width: 225px;
+        font-size: 16px;
+        left: 187.5px;
+        top: 0px;
+    }
+    #container {
+        top: 105px;
+        width: 225px;
+        left: 187.5px;
+        font-size: 12px;
+    }
+    #ring2,
+    #m {
+        left: 65.3px;
+    }
+    #ring3,
+    #h {
+        right: 65.3px;
+    }
+    #mm {
+        left: 55px;
+    }
+    #hr {
+        left: 130px;
+    }
+    #es {
+        left: -30px;
+    }
+    #q {
+        left: 230px;
+    }
+    #st {
+        width: 154px;
+        height: 27px;
+        left: 223px;
+        top: 200px;
+    }
+    #finish {
+        bottom: 0px;
+    }
+    #right,
+    #left {
+        height: 125px;
+        width: 65px;
+        top: 62.5px;
+    }
+    #center {
+        width: 200px;
+        height: 200px;
+        left: 200px;
+        top: 25px;
+    }
+    #line {
+        height: 250px;
+        left: 299px;
+        top: 0px;
+    }
+    #ball {
+        left: 290px;
+        top: 115px;
+    }
+    #boot,
+    #player {
+        height: 80px;
+        top: 85px;
+    }
+    #corner1,
+    #corner2,
+    #corner3,
+    #corner4 {
+        width: 30px;
+        height: 30px;
+    }
+    img {
+        display: none;
+    }
+    #rop {
+        display: none;
+    }
+    #timer {
+        display: block;
+        left: 272px;
+        top: 50px;
+    }
+}
+
+@media(min-width:320px)and (max-width:999px) and (max-height:280px) and (orientation:landscape) {
+    #game {
+        margin-top: -390px;
+    }
+    #result {
+        position: absolute;
+        bottom: -41px;
+    }
+    #finish {
+        transform: rotateZ(90deg);
+        right: -86px;
+        bottom: 135px;
+    }
+}
+
+@media (min-width:600px) and (orientation:portrait) {
+    img {
+        width: 400px;
+        height: 400px;
+    }
+    #tutorial {
+        display: none;
+    }
+    #rop {
+        font-size: 50px;
+    }
+}
+
+@media (min-width:1024px) and (max-width:1280px)and (orientation:landscape) {
+    #tutorial {
+        display: none;
+    }
+}
