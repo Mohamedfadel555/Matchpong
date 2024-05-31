@@ -85,6 +85,7 @@ document.getElementById("st").onclick = function() {
             let hide = document.getElementsByClassName("hide");
             for (let i = 0; i < hide.length; i++) {
                 hide[i].style.opacity = 1;
+                document.getElementById("result").style.direction = "rtl";
                 document.getElementById("result").textContent = `${namee} ${player}-${boot} Computer`;
             }
         }, 5500)
