@@ -99,6 +99,7 @@ document.getElementById("st").onclick = function() {
                 for (let i = 0; i < hide.length; i++) {
                     hide[i].style.opacity = 0;
                 }
+                document.getElementById("result").style.direction = "ltr";
                 document.getElementById("st").style.opacity = 1;
                 document.getElementById("container").style.opacity = 1;
                 document.getElementById("container").style.display = "block";
@@ -235,6 +236,7 @@ document.getElementById("st").onclick = function() {
 
     function start() {
         increase = 2;
+        document.getElementById("result").style.direction = "rtl";
         document.getElementById("result").textContent = `${namee} ${player}-${boot} Computer`;
         document.getElementById("result").style.opacity = 1;
         flagclear = false;
